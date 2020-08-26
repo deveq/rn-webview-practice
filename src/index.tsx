@@ -1,30 +1,6 @@
 import React from 'react';
-import styled from 'styled-components/native';
-
-import {SafeAreaView, Pressable, Text} from 'react-native';
+import {WebView} from 'react-native-webview';
 
 export default function HomeScreen() {
-  return (
-    <SafeAreaView>
-      <Wrapper>
-        <StyledPressable android_ripple={null}>
-          <Text>안녕</Text>
-        </StyledPressable>
-      </Wrapper>
-    </SafeAreaView>
-  );
+  return <WebView source={{uri: 'https://pickk.one/'}} style={{flex: 1}} />;
 }
-
-const Wrapper = styled.ScrollView({
-  width: '100%',
-  minHeight: '100%',
-});
-
-const StyledPressable = styled(Pressable)({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-  minHeight: '100%',
-  backgroundColor: '#FFF',
-  alignItems: 'center',
-});
